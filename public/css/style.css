@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.main-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.canvas-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.toolbar {
+  display: flex;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 8px;
+  border-top: 1px solid #444;
+  overflow-x: auto;
+  justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+
+.tool-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0 4px;
+  color: #f0f0f0;
+  font-size: 12px;
+  min-width: 60px;
+}
+
+.tool-button.active {
+  background: #0066cc;
+}
+
+.tool-button:disabled {
+  opacity: 0.5;
+}
+
+.tool-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  min-height: 80px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #444;
+  color: #fff;
+}
+
+.modal-buttons button:last-child {
+  background: #0066cc;
+}
+
+.result-image-container {
+  margin: 10px 0;
+}
+
+.result-image-container img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.brush-size-slider {
+  width: 100%;
+  margin: 10px 0;
+}
