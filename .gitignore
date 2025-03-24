@@ -1,0 +1,18 @@
+# Ignore uploads folder contents but keep the folder
+uploads/*
+!uploads/.gitkeep
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
